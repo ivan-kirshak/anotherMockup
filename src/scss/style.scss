@@ -17,6 +17,9 @@ button {
 .active {
   color: #5982e7;
 }
+
+// HEADER STYLES
+
 nav,
 .links,
 .left,
@@ -33,6 +36,10 @@ nav {
   img {
     padding: 0 1rem;
   }
+  img:hover {
+    filter: invert(55%) sepia(71%) saturate(2440%) hue-rotate(201deg)
+      brightness(90%) contrast(101%);
+  }
   a {
     text-decoration: none;
     font-weight: 500;
@@ -43,11 +50,15 @@ nav {
     text-shadow: 0px 0px 5px #e6e6e6;
   }
 }
-// .left,
-// .right {
-//   width: 50%;
-//   margin: 0 auto;
-// }
+.left {
+  justify-content: space-around;
+}
+.logo {
+  width: 1.75rem;
+  height: 1.75rem;
+  background-color: #5982e7;
+  border-radius: 50%;
+}
 .right {
   justify-content: space-around;
   button[type="button"] {
@@ -59,6 +70,7 @@ nav {
     padding: 1rem;
     background-color: #d2e1ff;
     font-weight: 700;
+    cursor: pointer;
   }
 }
 footer {
@@ -69,5 +81,115 @@ footer {
     letter-spacing: 0.05em;
     color: #aeb8d0;
     padding-left: 5rem;
+  }
+}
+
+// MAIN STYLES
+//first box styles
+.intro-box {
+}
+.intro-box-item {
+  background: #f1f5ff url("../images/intro-box.png") no-repeat center;
+  background-size: cover;
+  text-align: center;
+  height: 35.625rem;
+}
+.intro-box-item--slogan {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3d4f9f;
+  padding-top: 6rem;
+}
+.intro-box-item--heading {
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 60px;
+  color: #3d4f9f;
+  padding-top: 1rem;
+}
+.bold {
+  font-weight: 700;
+}
+.intro-box-item--text {
+  font-size: 15px;
+  line-height: 29px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #8d96bd;
+  padding-top: 1.75rem;
+}
+
+// brand logos styles
+.brand-logos {
+  display: flex;
+  justify-content: space-around;
+  margin: 3.625rem 0;
+}
+.brand-logos_logo {
+  cursor: pointer;
+  &:hover {
+    filter: invert(55%) sepia(71%) saturate(2440%) hue-rotate(201deg)
+      brightness(90%) contrast(101%);
+  }
+}
+
+// plan and manage block styles
+.plan-manage {
+  background-color: #f5f8ff;
+  padding-top: 10rem;
+}
+.plan-manage-flex {
+  display: flex;
+}
+.plan-manage_content-slogan {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #3d4f9f;
+}
+.plan-manage_content-heading {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 45px;
+  color: #3d4f9f;
+  padding-top: 1.75rem;
+}
+.plan-manage_content-text {
+  font-size: 15px;
+  line-height: 29px;
+  letter-spacing: 0.03em;
+  color: #8d96bd;
+  padding-top: 1.75rem;
+}
+.plan-manage_content-buttons {
+  padding-top: 3rem;
+  .one {
+    font-size: 13px;
+    line-height: 16px;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    padding: 1rem 1.5rem;
+    background-color: #4c85ff;
+    font-weight: 700;
+    box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
+    border-radius: 2px;
+  }
+  .two {
+    outline: none;
+    background: transparent;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    color: #adb4d2;
+    padding: 1rem 1.5rem;
+    border: 2px solid #adb4d2;
   }
 }
