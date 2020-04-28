@@ -3,7 +3,7 @@
   padding: 0;
 }
 html {
-  font-size: 16px;
+  font-size: 1rem;
 }
 body,
 a,
@@ -20,7 +20,35 @@ button {
 button[type="button"] {
   cursor: pointer;
 }
-
+.btn {
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 1rem;
+  padding: 13px 1rem;
+  border: none;
+  outline: none;
+}
+.slogan {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  letter-spacing: 0.1em;
+}
+.heading {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+}
+.big-heading {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 45px;
+}
+.bold {
+  font-weight: 700;
+}
 // HEADER STYLES
 
 nav,
@@ -66,7 +94,7 @@ nav {
   justify-content: space-around;
   button[type="button"] {
     font-size: 13px;
-    line-height: 16px;
+    line-height: 1rem;
     color: #3a79ff;
     border: none;
     outline: none;
@@ -96,7 +124,7 @@ footer {
   height: 35.625rem;
 }
 .intro-box-item--slogan {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 500;
   font-size: 10px;
   line-height: 12px;
@@ -112,9 +140,6 @@ footer {
   color: #3d4f9f;
   padding-top: 1rem;
 }
-.bold {
-  font-weight: 700;
-}
 .intro-box-item--text {
   font-size: 15px;
   line-height: 29px;
@@ -122,6 +147,8 @@ footer {
   letter-spacing: 0.03em;
   color: #8d96bd;
   padding-top: 1.75rem;
+  width: 30rem;
+  margin: 0 auto;
 }
 
 // brand logos styles
@@ -148,18 +175,12 @@ footer {
   justify-content: flex-end;
 }
 .plan-manage_content-slogan {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 12px;
-  letter-spacing: 0.1em;
+  @extend .slogan;
   text-transform: uppercase;
   color: #3d4f9f;
 }
 .plan-manage_content-heading {
-  font-weight: 500;
-  font-size: 36px;
-  line-height: 45px;
+  @extend .big-heading;
   color: #3d4f9f;
   padding-top: 1.75rem;
 }
@@ -173,27 +194,17 @@ footer {
 .plan-manage_content-buttons {
   padding-top: 3rem;
   .one {
-    font-size: 13px;
-    line-height: 16px;
     color: #ffffff;
-    border: none;
-    outline: none;
-    padding: 1rem 1.5rem;
     background-color: #4c85ff;
-    font-weight: 700;
     box-shadow: 0px 5px 15px rgba(188, 199, 255, 0.75);
-    border-radius: 2px;
+    @extend .btn;
   }
   .two {
-    outline: none;
     background: transparent;
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
     color: #adb4d2;
-    padding: 1rem 1.5rem;
     border: 2px solid #adb4d2;
     box-sizing: border-box;
+    @extend .btn;
   }
 }
 
@@ -208,18 +219,12 @@ footer {
   }
 }
 .our-app_inner-slogan {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 12px;
-  letter-spacing: 0.1em;
+  @extend .slogan;
   text-transform: uppercase;
   color: #3d4f9f;
 }
 .our-app-inner-heading {
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 30px;
+  @extend .heading;
   color: #3d4f9f;
 }
 .our-app_inner-flex {
@@ -231,7 +236,7 @@ footer {
   .line {
     width: 1.75rem;
     max-height: 1px;
-    border: 1px solid #DAE4FE;
+    border: 1px solid #dae4fe;
   }
 }
 .our-app_inner-flex-item {
@@ -258,26 +263,14 @@ footer {
   align-items: center;
 
   .one {
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
+    @extend .btn;
     color: #d43f3f;
-    padding: 13px 1rem;
     background: #ffd7d7;
-    border-radius: 2px;
-    border: none;
-    outline: none;
   }
   .two {
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
     color: #3a79ff;
-    padding: 13px 1rem;
     background: #d2e1ff;
-    border-radius: 2px;
-    border: none;
-    outline: none;
+    @extend .btn;
   }
 }
 .or {
@@ -287,11 +280,11 @@ footer {
   .line {
     width: 1.1rem;
     max-height: 1px;
-    border: 1px solid #DAE4FE;
+    border: 1px solid #dae4fe;
     margin: 1rem;
   }
   p {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
     font-size: 11px;
     line-height: 19px;
@@ -330,10 +323,171 @@ footer {
 }
 
 // blog
+.blog {
+  padding: 7rem 0;
+  background: #f5f8ff;
+}
+.blog-slogan {
+  @extend .slogan;
+  color: #3d4f9f;
+  text-align: center;
+}
+.blog-heading {
+  @extend .heading;
+  color: #3d4f9f;
+  text-align: center;
+  padding: 1.5rem 0 6rem 0;
+}
+.blog-items {
+}
+.blog-item {
+  background: #fff;
+  padding: 4rem 2rem;
+  display: flex;
+}
+.blog-item_images {
+  width: 50%;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 16.6875rem 7.875rem;
+  justify-items: center;
+
+  div:nth-of-type(2) > img {
+    padding-bottom: 5px;
+  }
+}
+.blog-item_texts {
+  width: 50%;
+}
+.blog-item_texts-heading {
+  @extend .big-heading;
+  color: #3d4f9f;
+}
+.blog-item_texts-text {
+  font-size: 14px;
+  line-height: 27px;
+  letter-spacing: 0.03em;
+  color: #8d96bd;
+  padding-top: 2rem;
+}
+.blog-item_texts-buttons {
+  padding-top: 2rem;
+}
+.one {
+  @extend .btn;
+  color: #3a79ff;
+  background: #d2e1ff;
+}
+.two {
+  background: transparent;
+  color: #fff;
+  @extend .btn;
+  color: #a6b6da;
+}
 
 // quotes
+.quotes {
+  background: linear-gradient(180deg, #eaf0ff 0%, #f6f9ff 100%);
+  padding: 7rem 0;
+}
+.quotes-flex {
+  display: flex;
+  justify-content: space-around;
+}
+.quotes-left {
+  width: 20rem;
+}
+.quotes-left_slogan {
+  @extend .slogan;
+  color: #3d4f9f;
+}
+.quotes-left_heading {
+  @extend .big-heading;
+  color: #3d4f9f;
+  padding-top: 2rem;
+}
+.quotes-left_text {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 23px;
+  letter-spacing: 0.03em;
+  color: #a4abc8;
+  padding-top: 1rem;
+}
+.quotes-right {
+  width: 50%;
+}
+.card {
+  background-color: #fff;
+  color: #676f95;
+  box-shadow: 0px 15px 50px #d4dcf1;
+  width: 26.25rem;
+}
+.card-text {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  padding: 3.5rem 4rem;
+  position: relative;
+
+  img {
+    position: absolute;
+    top: 90%;
+    left: 45%;
+  }
+}
 
 // FAQ
+.faq {
+  padding: 10rem 0;
+  text-align: center;
+}
+.faq-slogan {
+  @extend .slogan;
+  color: #3d4f9f;
+  text-transform: uppercase;
+}
+.faq-heading {
+  @extend .heading;
+  color: #3d4f9f;
+  padding-top: 1.5rem;
+}
+.questions {
+  width: 75%;
+  margin: 4rem auto 0 auto;
+}
+.question {
+  border-bottom: 2px solid #d8e3fe;
+  text-align: left;
+}
+.question-heading {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 19px;
+  letter-spacing: 0.03em;
+  color: #8e96b7;
+  padding: 1.5rem;
+}
+.answer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem;
+}
+.answer-text {
+  font-size: 14px;
+  line-height: 27px;
+  letter-spacing: 0.03em;
+  color: #8d96bd;
+  font-family: 'Roboto', sans-serif;
+  max-width: 50%;
+}
+.answer-btn {
+  @extend .btn;
+  color: #7382A3;
+  background: #E8ECF4;
+  margin-left: 4rem;
+}
 
 // get started
 .get-started {
@@ -344,10 +498,7 @@ footer {
 }
 .get-satrted_slogan {
   font-style: normal;
-  font-weight: 500;
-  font-size: 10px;
-  line-height: 12px;
-  letter-spacing: 0.1em;
+  @extend .slogan;
 }
 .get-started_heading {
   font-weight: 300;
@@ -364,24 +515,15 @@ footer {
 .get-started_buttons {
   padding-top: 2rem;
   .one {
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
+    @extend .btn;
     color: #565f82;
     background-color: #fff;
-    border: none;
-    outline: none;
-    padding: 13px 1rem;
   }
   .two {
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 16px;
     color: #c7d3ff;
     background: transparent;
     border: 2px solid #c7d3ff;
-    outline: none;
-    padding: 13px 1rem;
+    @extend .btn;
     box-sizing: border-box;
   }
 }
@@ -412,7 +554,7 @@ footer {
 .newsletter-flex_inputs {
   input[type="email"] {
     font-size: 13px;
-    line-height: 16px;
+    line-height: 1rem;
     color: #7a85ad;
     padding: 1.5rem;
     background: #efeff7;
@@ -425,7 +567,7 @@ footer {
   button[type="button"] {
     font-weight: 700;
     font-size: 13px;
-    line-height: 16px;
+    line-height: 1rem;
     color: #fff;
     background: #4d6ce1;
     padding: 1.5rem 4rem;
