@@ -30,7 +30,7 @@ button[type="button"] {
   outline: none; }
 
 .slogan, .plan-manage_content-slogan, .our-app_inner-slogan, .blog-slogan, .quotes-left_slogan, .faq-slogan, .get-satrted_slogan {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 10px;
   line-height: 12px;
@@ -48,6 +48,9 @@ button[type="button"] {
 
 .bold {
   font-weight: 700; }
+
+.flickity-page-dots .dot {
+  background: #5283ff; }
 
 nav,
 .links,
@@ -108,10 +111,14 @@ footer .footer-copyright {
   background: #f1f5ff url("../images/intro-box.png") no-repeat center;
   background-size: cover;
   text-align: center;
-  height: 35.625rem; }
+  height: 35.625rem;
+  width: 100%; }
+
+.intro-box .flickity-page-dots {
+  bottom: 25px; }
 
 .intro-box-item--slogan {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 10px;
   line-height: 12px;
@@ -245,7 +252,7 @@ footer .footer-copyright {
     border: 1px solid #dae4fe;
     margin: 1rem; }
   .or p {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 600;
     font-size: 11px;
     line-height: 19px;
@@ -280,7 +287,7 @@ footer .footer-copyright {
   text-align: left; }
 
 .blog {
-  padding: 7rem 0;
+  padding: 7rem 0 15rem 0;
   background: #f5f8ff; }
 
 .blog-slogan {
@@ -292,10 +299,24 @@ footer .footer-copyright {
   text-align: center;
   padding: 1.5rem 0 6rem 0; }
 
+.blog-items .flickity-page-dots {
+  bottom: -6rem; }
+
+.blog-items .flickity-button, .blog-items:hover {
+  background: transparent; }
+
+.blog-items .flickity-prev-next-button.previous {
+  left: -40px; }
+
+.blog-items .flickity-prev-next-button.next {
+  right: -40px; }
+
 .blog-item {
   background: #fff;
   padding: 4rem 2rem;
-  display: flex; }
+  display: flex;
+  width: 80%;
+  margin: 0 8rem; }
 
 .blog-item_images {
   width: 50%;
@@ -359,19 +380,24 @@ footer .footer-copyright {
 
 .quotes-right {
   width: 50%; }
+  .quotes-right .flickity-page-dots {
+    bottom: -3rem; }
+  .quotes-right .carousel-cell {
+    height: 20rem; }
 
 .card {
   background-color: #fff;
   color: #676f95;
   box-shadow: 0px 15px 50px #d4dcf1;
-  width: 26.25rem; }
+  width: 26.25rem;
+  margin-right: 10rem;
+  position: relative; }
 
 .card-text {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
-  padding: 3.5rem 4rem;
-  position: relative; }
+  padding: 3.5rem 4rem; }
   .card-text img {
     position: absolute;
     top: 90%;
@@ -416,12 +442,12 @@ footer .footer-copyright {
   line-height: 27px;
   letter-spacing: 0.03em;
   color: #8d96bd;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   max-width: 50%; }
 
 .answer-btn {
-  color: #7382A3;
-  background: #E8ECF4;
+  color: #7382a3;
+  background: #e8ecf4;
   margin-left: 4rem; }
 
 .get-started {

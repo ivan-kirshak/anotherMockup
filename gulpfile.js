@@ -2,6 +2,7 @@ const gulp = require('gulp');
 const sass = require('gulp-sass');
 const browserSync = require("browser-sync").create();
 const imagemin = require('gulp-imagemin');
+let uglify = require('gulp-uglify-es').default;
 
 // SCSS compile (Gulp 4 syntax)
 sass.compiler = require('node-sass');
@@ -23,6 +24,13 @@ function images () {
         .pipe(imagemin())
         .pipe(gulp.dest('build/images'))
 }
+
+gulp.task("uglify", function () {
+    return gulp.src("src/js/*.js")
+        .pipe(uglify(/* options */))
+        .pipe(gulp.dest("build/js"));
+});
+
 
 function watch () {
     browserSync.init({

@@ -30,7 +30,7 @@ button[type="button"] {
   outline: none;
 }
 .slogan {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 10px;
   line-height: 12px;
@@ -49,6 +49,10 @@ button[type="button"] {
 .bold {
   font-weight: 700;
 }
+.flickity-page-dots .dot {
+  background: #5283ff;
+}
+
 // HEADER STYLES
 
 nav,
@@ -122,9 +126,15 @@ footer {
   background-size: cover;
   text-align: center;
   height: 35.625rem;
+  width: 100%;
+}
+.intro-box {
+  .flickity-page-dots {
+    bottom: 25px;
+  }
 }
 .intro-box-item--slogan {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 500;
   font-size: 10px;
   line-height: 12px;
@@ -284,7 +294,7 @@ footer {
     margin: 1rem;
   }
   p {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 600;
     font-size: 11px;
     line-height: 19px;
@@ -324,7 +334,7 @@ footer {
 
 // blog
 .blog {
-  padding: 7rem 0;
+  padding: 7rem 0 15rem 0;
   background: #f5f8ff;
 }
 .blog-slogan {
@@ -339,11 +349,35 @@ footer {
   padding: 1.5rem 0 6rem 0;
 }
 .blog-items {
+  .flickity-page-dots {
+    bottom: -6rem;
+  }
+  .flickity-button,
+  &:hover {
+    background: transparent;
+  }
+
+  .flickity-prev-next-button.previous {
+    left: -40px;
+  }
+  .flickity-prev-next-button.next {
+    right: -40px;
+  }
 }
 .blog-item {
   background: #fff;
   padding: 4rem 2rem;
   display: flex;
+  width: 80%;
+  margin: 0 8rem;
+
+  // .slick-initialized .slick-slide {
+  //   display: flex;
+  // }
+  // .slick-prev, .slick-next {
+  //   width: 2.5rem;
+  //   height: 2.5rem;
+  // }
 }
 .blog-item_images {
   width: 50%;
@@ -416,19 +450,28 @@ footer {
 }
 .quotes-right {
   width: 50%;
+
+  .flickity-page-dots {
+    bottom: -3rem;
+  }
+  .carousel-cell {
+    height: 20rem;
+  }
 }
 .card {
   background-color: #fff;
   color: #676f95;
   box-shadow: 0px 15px 50px #d4dcf1;
   width: 26.25rem;
+  // margin: 0 5rem;
+  margin-right: 10rem;
+  position: relative;
 }
 .card-text {
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
   padding: 3.5rem 4rem;
-  position: relative;
 
   img {
     position: absolute;
@@ -479,13 +522,13 @@ footer {
   line-height: 27px;
   letter-spacing: 0.03em;
   color: #8d96bd;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   max-width: 50%;
 }
 .answer-btn {
   @extend .btn;
-  color: #7382A3;
-  background: #E8ECF4;
+  color: #7382a3;
+  background: #e8ecf4;
   margin-left: 4rem;
 }
 
