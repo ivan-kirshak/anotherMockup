@@ -37,3 +37,22 @@ let flickityThree = new Flickity (quotes, {
     freeScroll: true,
     cellSelector: ".card"
 })
+
+let collapseClick = document.getElementsByClassName("question-heading");
+
+function handleClick() {
+    let answer = this.nextElementSibling;
+    console.log(this.firstElementChild.src);
+
+    if (answer.style.display === "flex") {
+        answer.style.display = "none";
+        this.firstElementChild.src = './images/open.svg';
+    } else {
+        answer.style.display = "flex";
+        this.firstElementChild.src = "./images/close.svg";
+    }
+}
+
+for (let i = 0; i < collapseClick.length; i++) {
+    collapseClick[i].addEventListener("click", handleClick, false);
+}

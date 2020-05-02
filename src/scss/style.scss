@@ -451,6 +451,9 @@ footer {
 .quotes-right {
   width: 50%;
 
+  .flickity-viewport {
+    padding-bottom: 3rem;
+  }
   .flickity-page-dots {
     bottom: -3rem;
   }
@@ -504,15 +507,29 @@ footer {
   text-align: left;
 }
 .question-heading {
-  font-weight: 500;
+  font-weight: 700;
   font-size: 15px;
   line-height: 19px;
   letter-spacing: 0.03em;
   color: #8e96b7;
   padding: 1.5rem;
+  cursor: pointer;
+
+  &:hover {
+    color: #495274;
+  }
+
+  &:hover .heading-img {
+    filter: invert(29%) sepia(5%) saturate(3512%) hue-rotate(191deg)
+      brightness(100%) contrast(84%);
+  }
+
+  .heading-img {
+    padding-right: 2rem;
+  }
 }
 .answer {
-  display: flex;
+  display: none;
   justify-content: space-around;
   align-items: center;
   padding: 2rem;
