@@ -10,12 +10,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.7",
+    "bl": "^4.0.3",
+    "browser-sync": "^2.26.12",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^4.1.0",
     "gulp-uglify-es": "^2.0.0",
-    "node-sass": "^4.14.0"
+    "http-proxy": "^1.18.1",
+    "node-sass": "^4.14.1",
+    "yargs-parser": "^20.0.0"
   },
   "dependencies": {
     "normalize.css": "^8.0.1"
