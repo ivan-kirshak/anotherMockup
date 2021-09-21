@@ -18,7 +18,7 @@
     "gulp-uglify-es": "^2.0.0",
     "http-proxy": "^1.18.1",
     "node-sass": "^4.14.1",
-    "object-path": "^0.11.5",
+    "object-path": "^0.11.8",
     "yargs-parser": "^20.0.0"
   },
   "dependencies": {
